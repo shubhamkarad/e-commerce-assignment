@@ -1,0 +1,52 @@
+@import "colors";
+@fontSize:2rem;
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+//----------------Navbar---------------
+.navbar{
+    background-color:@blue;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) /2);
+    z-index: 10;
+    position: relative;
+
+        &--logo{
+            align-self: center;
+            cursor: pointer;
+            margin-left: 25px;
+        }
+        &--menu{
+            .align-center;
+            position: relative;  
+            i{
+                font-size: @fontSize;
+                &:nth-child(2){
+                    position: absolute;
+                    right: 200px;
+                    font-size: 1.2rem;
+                    align-self: center;
+                }
+            }
+            
+        }
+        &--link{
+            text-decoration: none;
+            .align-center;
+            justify-content: center;
+            padding: 0 1rem;
+            
+            input[type=text]{
+                
+                padding: 5px 250px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                }
+            }
+      
+    }

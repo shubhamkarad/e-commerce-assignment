@@ -1,0 +1,53 @@
+
+
+.footer__container{
+    background-color: #D8D8D8;
+    width: 100%;
+
+    .fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .field1{
+        margin: 10px auto;
+        text-align: center;
+    }
+    .field2{
+        margin: 10px auto;
+        text-align: center;
+
+        input[type=email]{
+            padding: 15px 50px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background-color: @light;
+        }
+        input[type=submit]{
+            padding: 5px 10px;
+            background-color: @yellow;
+            outline: none;
+            border: none;
+             border-radius: 8px;
+             margin-left: -100px;
+             cursor: pointer;
+        }
+    }
+    }
+    &--1{
+       text-align: center;
+       display: block;
+       margin: 0 auto;
+        #footerbar{
+                height: 2px;
+                width: 60%;
+                margin: 0 auto;
+                background-color: black;
+    }
+}
+}
