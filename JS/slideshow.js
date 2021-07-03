@@ -1,26 +1,31 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+// $(document).ready(function () {
+//     $('.right__arrow').on('click', function () {
+//         var currentImage = $('.active');
+//         var nextImage = currentImage.next();
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
+//         if (nextImage.length) {
+//             currentImage.removeClass('active').css('z-index', -10);
+//             nextImage.addClass('active').css('z-index', 10);
+//         }
+//     });
+//     $('.left__arrow').on('click', function () {
+//         var currentImage = $('.active');
+//         var prevImage = currentImage.prev();
 
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
+//         if (prevImage.length) {
+//             currentImage.removeClass('active').css('z-index', -10);
+//             prevImage.addClass('active').css('z-index', 10);
+//         }
+//     });
+// })
 
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("slides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " w3-white";
-}
+$(document).ready(function () {
+    $('#btn').click(function () {
+        $('.sidebar').toggleClass('activeSidebar');
+
+    })
+    $('#btn1').click(function () {
+        $('.sidebar').toggleClass('activeSidebar');
+
+    })
+})

@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Style/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
     <script src="JS/slideshow.js"></script>
     <title>Mobile Shop</title>
 </head>
@@ -14,31 +17,78 @@
     <!-- navbar section -->
     <nav>
         <div class="navbar">
-                <a class="navbar--logo">
-                    <img src="Images/samsungLogo.png" alt="Logo" width="100px" height="50px">
+                <a href="#" class="navbar--logo">
+                    <img src="Images/logo.png" alt="Logo" >
                 </a>
                 <div class="navbar--menu">
-                    <a href="" class="navbar--link"> <i class="fa fa-th"></i> Categories</a>
-                    <a href="" class="navbar--link"><input type="text" value="" placeholder="Search"><i class="fa fa-search"></i></a>
-                    <a href="" class="navbar--link"><i class="fa fa-id-badge"></i></a>
-                    <a href="" class="navbar--link"><i class="fa fa-question-circle"></i></a>
+                    <a href="#" id="btn" class="navbar--link"> <i class="fa fa-th"></i> Categories</a>
+                    <a href="#" class="navbar--link"><input type="text" value="" placeholder="Search"><i class="fa fa-search"></i></a>
+                    <a href="#footerNav" class="navbar--link"><i class="fa fa-id-badge"></i></a>
+                    <a href="#footerNav" class="navbar--link"><i class="fa fa-question-circle"></i></a>
                     <a href="" class="navbar--link"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+            <div class="mobileNavbar">
+                <a href="#" class="navbar--link"> <i class="fa fa-home"></i></a>
+                <a href="#footerNav" class="navbar--link"><i class="fa fa-id-badge"></i></a>
+                <a href="#" id="btn1" class="navbar--link"> <i class="fa fa-th"></i></a>
+                <a href="#footerNav" class="navbar--link"><i class="fa fa-question-circle"></i></a>
+                <a href="#" class="navbar--link"><i class="fa fa-shopping-cart"></i></a>
             </div>
         </div>
     </nav>
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Mobile Phones</a>
+                    <ul>
+                        <li><a href="#">Apple <i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#">Samsung<i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#">Oneplus<i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#">Realme<i class="fa fa-arrow-right"></i></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Accessories</a></li>
+                <ul>
+                <li><a href="#">Mobile Cables <i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#">Memory Card<i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#">Headphones<i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#">Mifone<i class="fa fa-arrow-right"></i></a></li>
+                </ul>
+            </ul>
+        </div>
     <!-- slideshow section -->
-    <div class="responsive-slider bd-grid">
-       <!-- <img class="slides" src="Images/cover1.jfif" alt="" width="100%">
-       <img class="slides" src="Images/cover2.jpg" alt="" width="100%" style="max-width: 1200px;"> -->
-       <img class="slides" src="Images/cover3.webp" alt="" width="100%" height="350px">
-        <!-- <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <!-- <div class="responsive-slider bd-grid">
+    
+        <div class="slider--outer">
+        <a href="" class="left__arrow"><i class="fa fa-arrow-left"></i></a></i>
+        <div class="slider_img">
+       <img  src="Images/cover3.webp" alt="" class="active">
+       <img  src="Images/iamge1.jpg" alt="" >
+       <img  src="Images/iamge2.jpg" alt="" >
+        </div>
+        <a href="" class="right__arrow"><i class="fa fa-arrow-right"></i></a></i>
+        </div>
+   
     </div> -->
+    <div class="slideshow-container">   
+        <div class="mySlides fade">
+            <img src="Images/cover3.webp" style="width:100%">          
+        </div>   
+        <div class="mySlides fade">        
+            <img src="Images//iamge1.jpg" style="width:100%">          
+        </div> 
+        <div class="mySlides fade">       
+            <img src="Images//iamge2.jpg" style="width:100%">         
+        </div>    
     </div>
+    <br>
+    
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
     <!-- top Deals section -->
     <div class="deals bd-grid">
             <h3>Top Deals on your favourite phone!</h3>    
@@ -273,10 +323,10 @@
         </div>
         </div> 
     </footer> -->
-    <div class="footer__container">
+    <section class="footer__container" id="footerNav">
         <footer>
             <!-- Footer main -->
-            <section class="ft-main">
+            <div class="ft-main">
                 <div class="ft-main--item">
                     <p>SIGN UP TO OUR NEWS LETTER</p>
                     <p>Be the first to receive our promotions</p>
@@ -287,18 +337,85 @@
                         <input type="submit" value="Subscribe">
                     </form>
                 </div>
-            </section>
+            </div>
             <p id="footerbar"></p>
             <h2>Why shop with us?</h2>
-            <section class="ft-main">
+            <div class="ft-main">
                 <div class="ft-main--item1">
                     <img src="Images/genuine.png" alt="Genuine">
-                    <p id="headerText">GUARANTEED PRODUCT QUALITY</p>
+                    <p id="headerText">Guaranteed Product Quality</p>
                     <p id="bodyText"><b>No fake products</b> with money back guarantee<br>
                    <b>Instant returns</b> on unsatisfactory products upon delivery</p>
                 </div>
-            </section>
+                <div class="ft-main--item1">
+                    <img src="Images/delivery-guarantee.png" alt="Genuine">
+                    <p id="headerText">Fast Reliable Deliveries</p>
+                    <p id="bodyText"><b>3 Hours Deliver</b> Promise within Nashik<br>
+                   <b>Selected</b> pickup points for convenience</p>
+                </div>
+                <div class="ft-main--item1">
+                    <img src="Images/years-of-trust.png" alt="Genuine">
+                    <p id="headerText">Personalized For You</p>
+                    <p id="bodyText"><b>Pay with bonga points, M-PESA or credit card</b><br>
+                   <b>Compare products</b> for easy purchase <br>
+                    <b>Get digital assistance</b>in your purchase</p>
+                </div>
+            </div>
+            <p id="footerbar"></p>
+            <h6>Stay Connected With Us</h6>
+            <div class="ft-main">
+                <div class="ft-main--social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="ft-main">
+                <div class="ft-main--links">
+                    <a href="#" class="footer__links">How to Shop</a>
+                    <a href="#" class="footer__links">About Us</a>
+                    <a href="#" class="footer__links">Terms & Conditions</a>
+                    <br>
+                    <a href="#" class="footer__links">My Account</a>
+                    <a href="#" class="footer__links">My Order</a>
+                    <a href="#" class="footer__links">Track My Order</a>
+                    <a href="#" class="footer__links">Privacy Policy</a>
+                    <a href="#" class="footer__links">Returns Policy</a>
+                    <a href="#" class="footer__links">Refund Policy</a>
+                    <br>
+                    <a href="#" class="footer__links">FAQ's</a>
+                    <a href="#" class="footer__links">Shipping & Delivery Policy</a>
+                    <a href="#" class="footer__links">Customer Service</a>
+                </div>
+            </div>
+            <div class="ft-main">
+                <div class="ft-main--google">
+                    <img src="Images/google-play.89324eb3.png" alt="Google Play">
+                    <img src="Images/app-store.png" alt="App Store">
+                </div>
+            </div>
+            <p id="license">© 2021. Shubham Karad</p>
         </footer>
-    </div>
+    </section>
+    <script>
+        var slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style = "display:block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+    </script>
 </body>
 </html>

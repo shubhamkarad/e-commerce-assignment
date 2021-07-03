@@ -1,5 +1,7 @@
 @import "navbar";
 @import "footer";
+@import "media_queries";
+@import "slideshow";
 //-----Constant-------
 * {
     padding: 0;
@@ -7,14 +9,6 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-//-------slideshow------------
-
-.slides{
-    display: block;
-    .w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-}
-
 .bd-grid{
     display: grid;
     grid-template-columns: 1fr ;
@@ -24,7 +18,87 @@
     padding-right: 25px;
     margin: 0 auto;
 }
+//-------Sidebar------------
 
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: @light;
+    width: 250px;
+    height: 100%;
+    transition: .3s;
+    z-index: 1;
+    box-shadow: 3px 0px 5px #0000005c;
+    ul,li{
+        padding: 0;
+    }
+    ul{
+        margin-top: 35px;
+        padding: 20px 20px;
+        
+        li{
+            list-style: none;
+                  
+            a{
+                padding: 10px 20px;
+                color:@dark;  
+                display: block;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(0,0,0,.2);
+
+                &:hover{
+                    background-color: @yellow;
+                    transition: all .3s ease;
+                }
+                i{
+                    font-size: 1rem;
+                    color: @dark;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+.activeSidebar{
+        left: 0;
+    }
+//-------slideshow------------
+.responsive-slider{
+    
+   
+    .slider--outer{
+    position: relative;
+  
+    .slider_img img{
+    display: none;
+    // padding-top: 30px;
+    // margin-top: 10px;
+    width:100%;
+    height:350px;
+    cursor: pointer;
+    }
+    .slider_img img.active{
+        display: inline-block;
+    }
+    }
+   
+}
+  .left__arrow, .right__arrow{
+       float: left;
+       cursor: pointer; 
+       
+    }
+    .left__arrow{
+        position: relative;
+        margin-top: 120px;
+        z-index: 100;
+    }
+     .right__arrow{
+        position: relative;
+        z-index: 100;
+        color: black;
+    }
 //deals container-------------------
 
 .deals{
@@ -36,7 +110,6 @@
     }
     &__container{
         display: flex;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         padding-left: 20px;
         padding-right: 20px;
         max-width: 1200px;
@@ -45,6 +118,7 @@
         background-color: @light;
         padding-top: 20px;
         padding-bottom: 20px;
+
     }
     
 }
@@ -55,7 +129,9 @@
     margin: 0 3px;
     padding: 0 10px;
     cursor: pointer;
-
+    position: relative;
+    border-radius: 5px;
+      box-shadow: 3px 3px 5px #0000005c;
     img{
         height: 150px;
         width: 150px;
@@ -64,6 +140,11 @@
         font-size: 1.3rem;
         float: right;
         color:#a19e9e;
+
+        &:hover{
+            color: @red;
+            transition: all 0.3s ease;
+        }
     }
     #offDeal{
         padding-top:20px;
@@ -71,6 +152,9 @@
     }
     button{
         float: left;
+        position: absolute;
+        top: 340px;
+        left: 32px;
         margin-bottom: 10px;
         padding: 10px 20px;
         border: none;
@@ -79,6 +163,11 @@
         background-color: @darkGreen;
         color: @light;
         cursor: pointer;
+
+        &:hover{
+            background-color: @darkBlue;
+            transition: all 0.3s ease;
+        }
     }
 }
 //-----mid offers-----
@@ -109,3 +198,4 @@
         background-color: black;
     }
 }
+

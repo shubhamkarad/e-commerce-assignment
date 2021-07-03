@@ -1,3 +1,7 @@
+.transitions{
+    transition: all 0.3s ease;
+    color: @darkGreen;
+}
 #footerbar{
     display: block;
     height: 2px;
@@ -37,30 +41,91 @@
         }
         }
         &--item1{
-            display: inline-block;
+            display: block;
             justify-content: center;
             align-items: center;
+            padding:  5px 25px;
+           
             img{
+            display: block;
             max-width: 50px;
             max-height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px 0;
         }
         #headerText{
             font-weight: 500;
             text-transform: uppercase;
+            text-align: center;
             
         }   
         #bodyText{
             font-size: .9rem;
             color: @darkGrey;
-           
+           text-align: center;
         }
+        }
+
+        //Social
+        &--social{
+            display: flex;
+            font-size: 2rem;
+            
+            a{
+                padding: 5px 20px;
+                
+            }
+        }
+
+        //Links
+        &--links{
+            align-items: center;
+            text-align: center;
+
+            a{
+                padding: 10px 5px;
+
+                &:hover{
+                    .transitions;
+                }
+            }
+        }
+        //Google Links
+        img{
+            cursor: pointer;
         }
     }
     h2{
         text-align: center;
     }
-
+    h6{
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    #license{
+        text-align: center;
+        color: @darkGrey;
+        font-size: .8rem;
+        padding-bottom: 20px;
+        @media screen and(max-width:768px) {
+                margin-bottom: 40px;
+                padding: 25px 0px;
+        }
+    }
+    i{
+        color:@darkGrey;
+        &:hover{
+            color: @darkGreen;
+            transition: all  0.2s ease;
+            font-size: 2.5rem;
+        }
 }
+}
+
+
 
 // .footer__container{
 //     background-color: #D8D8D8;
