@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ------------------Favicon Link---------------- -->
     <link rel="shortcut icon" href="/Images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Style/style.css">
@@ -14,18 +15,19 @@
     <title>Mobile Shop</title>
 </head>
 <body>
-    <!-- navbar section -->
+<!-- ------------------Navbar Section---------------- -->
+    <header>
     <nav>
         <div class="navbar">
                 <a href="#" class="navbar--logo">
                     <img src="Images/logo.png" alt="Logo" >
                 </a>
                 <div class="navbar--menu">
-                    <a href="#" id="btn" class="navbar--link"> <i class="fa fa-th"></i> Categories</a>
+                    <a href="#" id="btn" class="navbar--link"><i class="fa fa-bars"></i><span>Categories</span></a>
                     <a href="#" class="navbar--link"><input type="text" value="" placeholder="Search"><i class="fa fa-search"></i></a>
-                    <a href="#footerNav" class="navbar--link"><i class="fa fa-id-badge"></i></a>
+                    <a href="#footerNav" class="navbar--link"><i class="fa fa-user-circle"></i></a>
                     <a href="#footerNav" class="navbar--link"><i class="fa fa-question-circle"></i></a>
-                    <a href="" class="navbar--link"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="#bestAccess" class="navbar--link"><i class="fa fa-shopping-cart"></i></a>
             </div>
             <div class="mobileNavbar">
                 <a href="#" class="navbar--link"> <i class="fa fa-home"></i></a>
@@ -36,40 +38,29 @@
             </div>
         </div>
     </nav>
-        <!-- sidebar -->
+    </header>
+        <!-- ------------------Categories Sidebar---------------- -->
         <div class="sidebar">
+            <a href="#" class="closeBtn"> <i class="fa fa-times"></i></a>
             <ul>
-                <li><a href="#">Mobile Phones</a>
+                <li><a href="#"><b>Mobile Phones</b></a>
                     <ul>
-                        <li><a href="#">Apple <i class="fa fa-arrow-right"></i></a></li>
-                        <li><a href="#">Samsung<i class="fa fa-arrow-right"></i></a></li>
-                        <li><a href="#">Oneplus<i class="fa fa-arrow-right"></i></a></li>
-                        <li><a href="#">Realme<i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#home">Apple <i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#home">Samsung<i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#home">Oneplus<i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="#home">Realme<i class="fa fa-arrow-right"></i></a></li>
                     </ul>
                 </li>
-                <li><a href="#">Accessories</a></li>
+                <li><a href="#"><b>Accessories</b></a></li>
                 <ul>
-                <li><a href="#">Mobile Cables <i class="fa fa-arrow-right"></i></a></li>
-                <li><a href="#">Memory Card<i class="fa fa-arrow-right"></i></a></li>
-                <li><a href="#">Headphones<i class="fa fa-arrow-right"></i></a></li>
-                <li><a href="#">Mifone<i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#bestAccess">Mobile Cables <i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#bestAccess">Memory Card<i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#bestAccess">Headphones<i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#bestAccess">Mifone<i class="fa fa-arrow-right"></i></a></li>
                 </ul>
             </ul>
         </div>
-    <!-- slideshow section -->
-    <!-- <div class="responsive-slider bd-grid">
-    
-        <div class="slider--outer">
-        <a href="" class="left__arrow"><i class="fa fa-arrow-left"></i></a></i>
-        <div class="slider_img">
-       <img  src="Images/cover3.webp" alt="" class="active">
-       <img  src="Images/iamge1.jpg" alt="" >
-       <img  src="Images/iamge2.jpg" alt="" >
-        </div>
-        <a href="" class="right__arrow"><i class="fa fa-arrow-right"></i></a></i>
-        </div>
-   
-    </div> -->
+        <!-- ------------------Slideshow---------------- -->
     <div class="slideshow-container">   
         <div class="mySlides fade">
             <img src="Images/cover3.webp" style="width:100%">          
@@ -81,15 +72,15 @@
             <img src="Images//iamge2.jpg" style="width:100%">         
         </div>    
     </div>
-    <br>
-    
+    <br>  
     <div style="text-align:center">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
 
-    <!-- top Deals section -->
+    <!-- ------------------Top Deals Section---------------- -->
+    <section id="home">
     <div class="deals bd-grid">
             <h3>Top Deals on your favourite phone!</h3>    
             <p id="linebar"></p>
@@ -156,15 +147,17 @@
                    <button class="deal--btn">Add to Cart</button>
                 </div>                    
     </div>
-    <!-- mid offers -->
+    </section>
+    <!-- ------------------Middle page Banners---------------- -->
     <div class="midOffers bd-grid">
-        <img src="Images/samsung-mobile-banner.png" alt="">
+        <img src="Images/s21plus-galaxy-desktop.webp" alt="">
         <div class="mid__container">
-            <img src="Images/blutooth.png" alt="">
-            <img src="Images/SamsungGalaxyBluetoothBuds.png" alt="">
+            <img src="Images/Oraimo_OEB.png" alt="">
+            <img src="Images/Mifi_block.png" alt="">
         </div>
     </div>
-        <!-- Accessories -->
+    <!-- ------------------Accessories---------------- -->
+    <section id="accessories">
      <div class="accessories bd-grid">
         <h3>Must have Huawei Accessories</h3>
         <p id="linebar"></p>
@@ -231,11 +224,13 @@
             <button class="deal--btn">Add to Cart</button>
         </div>
     </div>
-    <!-- mid offers -->
+    </section>
+    <!-- ------------------Headphone Offer Banner---------------- -->
     <div class="midOffers bd-grid">
         <img src="Images/SNY_Headphone_bannerjpg.jpg" alt="">
     </div>
-    <!-- Best Of Accessories -->
+    <!-- ------------------Best of Accessories---------------- -->
+    <section id="bestAccess">
     <div class="accessories bd-grid">
         <h3>Best Of Accessories</h3>
         <p id="linebar"></p>
@@ -302,6 +297,7 @@
             <button class="deal--btn">Add to Cart</button>
         </div>
     </div>
+    </section>
     <!-- <footer>
        <div class="footer__container">   
         <div class="fields">
@@ -323,6 +319,8 @@
         </div>
         </div> 
     </footer> -->
+
+    <!-- ------------------Footer Section---------------- -->
     <section class="footer__container" id="footerNav">
         <footer>
             <!-- Footer main -->
@@ -417,5 +415,7 @@
                 setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
     </script>
+    <!-- Scroll reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>

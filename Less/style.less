@@ -1,3 +1,7 @@
+/*-----------Google Fonts------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
 @import "navbar";
 @import "footer";
 @import "media_queries";
@@ -7,7 +11,8 @@
     padding: 0;
     margin:0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
 }
 .bd-grid{
     display: grid;
@@ -18,7 +23,7 @@
     padding-right: 25px;
     margin: 0 auto;
 }
-//-------Sidebar------------
+/* //----------------Sidebar---------------// */
 
 .sidebar{
     position: fixed;
@@ -46,7 +51,7 @@
                 display: block;
                 text-decoration: none;
                 border-bottom: 1px solid rgba(0,0,0,.2);
-
+                transition: all .3s ease;
                 &:hover{
                     background-color: @yellow;
                     transition: all .3s ease;
@@ -59,47 +64,23 @@
             }
         }
     }
+    .closeBtn{
+        color: @dark;
+        font-size: 2rem;
+        position: absolute;
+        top: 55px;
+        left: 220px;
+        &:hover{
+            color: @red;
+        }
+    }
 }
 .activeSidebar{
         left: 0;
     }
-//-------slideshow------------
-.responsive-slider{
-    
-   
-    .slider--outer{
-    position: relative;
-  
-    .slider_img img{
-    display: none;
-    // padding-top: 30px;
-    // margin-top: 10px;
-    width:100%;
-    height:350px;
-    cursor: pointer;
-    }
-    .slider_img img.active{
-        display: inline-block;
-    }
-    }
-   
-}
-  .left__arrow, .right__arrow{
-       float: left;
-       cursor: pointer; 
-       
-    }
-    .left__arrow{
-        position: relative;
-        margin-top: 120px;
-        z-index: 100;
-    }
-     .right__arrow{
-        position: relative;
-        z-index: 100;
-        color: black;
-    }
-//deals container-------------------
+
+
+/* //----------------Deals---------------// */
 
 .deals{
 
@@ -132,6 +113,10 @@
     position: relative;
     border-radius: 5px;
       box-shadow: 3px 3px 5px #0000005c;
+
+      &:hover{
+          border: 1px solid green;
+      }
     img{
         height: 150px;
         width: 150px;
@@ -173,13 +158,13 @@
 //-----mid offers-----
 .midOffers{
     img{
-        
         height: 100%;
         width: 100%;
     }
     .mid__container{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        column-gap: .3rem;
         max-width: 1200px;
         margin: 5px auto;
         justify-self: center;
@@ -198,4 +183,25 @@
         background-color: black;
     }
 }
-
+/* //----------------Responsive ---------------// */
+@media screen and(max-width:768px){
+         .deals__container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;        
+            margin: 0 auto;     
+        }
+        .deal-item{
+            height: 400px;
+            width: auto;
+            
+            
+            button{
+                display: block;
+                top: 340px;
+            }
+            i{
+                margin-top: 20px;
+            }
+        
+        }
+}

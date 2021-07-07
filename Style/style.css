@@ -1,14 +1,37 @@
+/*-----------Google Fonts------------ */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
 .align-center {
   display: flex;
   align-items: center;
 }
 .navbar {
-  background-color: #24c0db;
+  background-color: #154e85;
   height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1200px) / 2);
+  box-shadow: 0px 3px 5px #0000005c;
   z-index: 10;
   overflow: hidden;
   position: fixed;
@@ -26,6 +49,10 @@
   display: flex;
   align-items: center;
   position: relative;
+}
+.navbar--menu a span {
+  color: #f7f7f7;
+  margin-left: 10px;
 }
 .navbar--menu i {
   color: #fff;
@@ -53,12 +80,18 @@
   padding: 0 1rem;
 }
 .navbar--link input[type=text] {
+  margin: auto 0;
+  display: inline-block;
   padding: 5px 250px;
   border: none;
   outline: none;
   border-radius: 10px;
+  resize: vertical;
 }
 @media screen and (max-width: 768px) {
+  .navbar {
+    position: fixed;
+  }
   .navbar--logo img {
     width: 50px;
     height: 30px;
@@ -72,10 +105,11 @@
   .navbar--menu i:nth-child(2) {
     display: inline-block;
     position: fixed;
-    right: 35px;
+    margin-right: 60px;
+    right: 50px;
   }
   .navbar .mobileNavbar {
-    background-color: #24c0db;
+    background-color: #154e85;
     height: 60px;
     width: 100%;
     display: flex;
@@ -91,13 +125,20 @@
     color: #f7f7f7;
   }
   .navbar--link input[type=text] {
-    padding: 5px 50px;
+    display: inline-block;
+    padding: 5px 60px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar--link input[type=text] {
+    padding: 5px 30px;
   }
 }
 .transitions {
   transition: all 0.3s ease;
   color: #086b31;
 }
+/* //----------------Footer---------------// */
 #footerbar {
   display: block;
   height: 2px;
@@ -261,17 +302,12 @@
     opacity: 1;
   }
 }
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {
-    font-size: 11px;
-  }
-}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
 }
 .bd-grid {
   display: grid;
@@ -282,6 +318,7 @@
   padding-right: 25px;
   margin: 0 auto;
 }
+/* //----------------Sidebar---------------// */
 .sidebar {
   position: fixed;
   top: 0;
@@ -310,6 +347,7 @@
   display: block;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 .sidebar ul li a:hover {
   background-color: #f1bb3e;
@@ -320,36 +358,20 @@
   color: #222121;
   float: right;
 }
+.sidebar .closeBtn {
+  color: #222121;
+  font-size: 2rem;
+  position: absolute;
+  top: 55px;
+  left: 220px;
+}
+.sidebar .closeBtn:hover {
+  color: #fb3849e8;
+}
 .activeSidebar {
   left: 0;
 }
-.responsive-slider .slider--outer {
-  position: relative;
-}
-.responsive-slider .slider--outer .slider_img img {
-  display: none;
-  width: 100%;
-  height: 350px;
-  cursor: pointer;
-}
-.responsive-slider .slider--outer .slider_img img.active {
-  display: inline-block;
-}
-.left__arrow,
-.right__arrow {
-  float: left;
-  cursor: pointer;
-}
-.left__arrow {
-  position: relative;
-  margin-top: 120px;
-  z-index: 100;
-}
-.right__arrow {
-  position: relative;
-  z-index: 100;
-  color: black;
-}
+/* //----------------Deals---------------// */
 .deals #linebar {
   height: 2px;
   width: 100%;
@@ -376,6 +398,9 @@
   position: relative;
   border-radius: 5px;
   box-shadow: 3px 3px 5px #0000005c;
+}
+.deal-item:hover {
+  border: 1px solid green;
 }
 .deal-item img {
   height: 150px;
@@ -419,6 +444,7 @@
 .midOffers .mid__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 0.3rem;
   max-width: 1200px;
   margin: 5px auto;
   justify-self: center;
@@ -431,4 +457,23 @@
   height: 2px;
   width: 100%;
   background-color: black;
+}
+/* //----------------Responsive ---------------// */
+@media screen and (max-width: 768px) {
+  .deals__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+  }
+  .deal-item {
+    height: 400px;
+    width: auto;
+  }
+  .deal-item button {
+    display: block;
+    top: 340px;
+  }
+  .deal-item i {
+    margin-top: 20px;
+  }
 }
